@@ -52,8 +52,8 @@ const LinePlot: FC<LinePlotProps> = ({ n }) => {
       <h1>Here are the {n} graphs</h1>
       <div className="grid">
         {data?.map((trace, i) => (
-          <div className="container">
-            <Plot key={i} data={[trace]} layout={{ width: 430, height: 323 }} />
+          <div key={i} className="container">
+            <Plot data={[trace]} layout={{ width: 430, height: 323 }} />
             <button className="btn" onClick={() => handleFullPlot(i)}>
               View in fullscreen
             </button>
